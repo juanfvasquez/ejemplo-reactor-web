@@ -28,6 +28,7 @@ public class DemoController {
         return numeros;
     }
 
+//    @GetMapping(value = "/numeros-reactivo", produces = MediaType.APPLICATION_STREAM_JSON_VALUE)
     @GetMapping(value = "/numeros-reactivo", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
     public Flux<Integer> numerosReactivo() {
         return Flux.create(sink -> {
