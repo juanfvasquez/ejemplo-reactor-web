@@ -42,4 +42,9 @@ public class RabbitMqConfig {
         template.setMessageConverter(jsonMessageConverter());
         return template;
     }
+
+    @Bean
+    public Receiver receiver() {
+        return new Receiver();
+    }
 }
